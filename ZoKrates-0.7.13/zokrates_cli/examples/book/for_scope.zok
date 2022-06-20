@@ -1,0 +1,7 @@
+def main() -> u32:
+	u32 a = 0
+	for u32 i in 0..5 do
+		a = a + i
+	endfor
+	// return i <- not allowed
+	return a

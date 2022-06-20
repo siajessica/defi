@@ -1,0 +1,65 @@
+{
+    "entry_point": "./tests/tests/panics/deep_branch.zok",
+    "curves": ["Bn128"],
+    "config": {
+        "isolate_branches": true
+    },
+	"tests": [
+        {
+            "input": {
+                "values": [
+                    [true, true, true]
+                ]
+            },
+            "output": {
+				"Ok": {
+                    "values": [
+                        [true, true, true]
+                    ]
+                }
+            }
+        },
+        {
+            "input": {
+                "values": [
+                    [false, false, false]
+                ]
+            },
+            "output": {
+				"Ok": {
+                    "values": [
+                        [false, false, false]
+                    ]
+                }
+            }
+        },
+        {
+            "input": {
+                "values": [
+                    [false, true, false]
+                ]
+            },
+            "output": {
+				"Ok": {
+                    "values": [
+                        [false, true, false]
+                    ]
+                }
+            }
+        },
+        {
+            "input": {
+                "values": [
+                    [true, false, true]
+                ]
+            },
+            "output": {
+				"Ok": {
+                    "values": [
+                        [true, false, true]
+                    ]
+                }
+            }
+        }
+    ]
+}
